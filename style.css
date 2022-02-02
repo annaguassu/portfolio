@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@300&display=swap');
 
 body{
-    background-color: #B1E6D8;
+    background-color: #000;
 }
 
 section{
@@ -14,13 +14,13 @@ section{
 }
 
 #cabecalho:hover{
-    color: #C98DE3;
+    color: #EF45FF;
 }
 
 #cabecalho{
     margin-left: 5px;
     margin-right: 5px;
-    color: #EF45FF;
+    color: #000;
 }
 
 .description{
@@ -92,7 +92,7 @@ button{
     width: 190px;
     height: 54px;
     left: 250px;
-    top: 220px;
+    top: 20px;
     color: #EF45FF;
     background: #9FF22D;
     border: none;
@@ -119,10 +119,9 @@ button{
     position: absolute;
     width: 1100px;
     height: 798px;
-    left: 177px;
+    left: 176px;
     top: 447px;
     background: #FFFFFF;
-
 }
 .pqtrampar::before{
     position: absolute;
@@ -146,4 +145,26 @@ button{
 ::-webkit-scrollbar-thumb{
     background: #EF45FF;
     border-radius: 30px;
+}
+
+.col-pqtrampar{
+    width: 320px;
+    height: 264px;
+    margin-top: 100px;
+}
+
+#pq{
+    position: absolute;
+    width: 300px;
+    height: 21px;
+    left: 50px;
+    top: 43px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #EF45FF;
 }
