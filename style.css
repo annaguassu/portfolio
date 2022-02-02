@@ -1,16 +1,68 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@300&display=swap');
 
 body{
-    background-color: #000;
+    background-color: #B1E6D8;
+    transition: background 0.2s linear;
 }
 
+body.dark{
+    background: #000;
+    
+}
+
+nav.dark, .cabecalho.dark{
+    background-color: #500172;
+
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #000;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 40px;
+    transform: scale(1.5);
+    margin: 5px;
+    margin-left: 13px;
+
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translate(16px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+.fa-sun{
+    color: #f39c12;
+}
 section{
     background-color: #fff;
 }
 
 .nav, .cabecalho{
     background-color: #9FF22D;
+    padding-right: 6px;
 }
 
 #cabecalho:hover{
@@ -18,8 +70,8 @@ section{
 }
 
 #cabecalho{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 6px;
+    margin-right: 6px;
     color: #000;
 }
 
@@ -123,6 +175,9 @@ button{
     top: 447px;
     background: #FFFFFF;
 }
+strong, h4{
+    font-family: 'Roboto', sans-serif;
+}
 .pqtrampar::before{
     position: absolute;
     content: '';
@@ -167,4 +222,10 @@ button{
     line-height: 21px;
     /* identical to box height */
     color: #EF45FF;
+}
+
+#theme-button{
+    margin-top: 3px;
+    margin: 5px;
+    padding-right: 3px;
 }
