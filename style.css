@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@300&display=swap');
 
+:root{
+    --main-color-text: #000;
+    --button-nav: #9FF22D;
+    --main-title: #EF45FF;
+    --bg-before: #B1E6D8;
+    --bg-after:#fff;
+}
+
 body{
-    background-color: #B1E6D8;
+    background-color: var(--bg-before);
     transition: background 0.2s linear;
 }
 
 body.dark{
-    background: #000;
-    
+    --main-color-text: #fff;
+    --bg-before: #000;
+    --button-nav: #500172;
+    --main-title: violet;
+    --bg-after: grey;
 }
 
 nav.dark, .cabecalho.dark{
@@ -57,22 +68,22 @@ nav.dark, .cabecalho.dark{
     color: #f39c12;
 }
 section{
-    background-color: #fff;
+    background-color: var(--bg-after);
 }
 
 .nav, .cabecalho{
-    background-color: #9FF22D;
+    background-color: var(--button-nav);
     padding-right: 6px;
 }
 
 #cabecalho:hover{
-    color: #EF45FF;
+    color: var(--main-title);
 }
 
 #cabecalho{
     margin-left: 6px;
     margin-right: 6px;
-    color: #000;
+    color: var(--main-color-text);
 }
 
 .description{
@@ -83,7 +94,7 @@ section{
     left: 161px;
     top: 63px;
 
-background: #fff;
+background: var(--bg-after);
 }
 
 .texto{
@@ -105,15 +116,17 @@ img{
 }
 
 h2{
+    color: var(--main-color-text);
     font-family: 'Roboto', sans-serif;
 }
 
 .linha{
+    color: var(--main-color-text);
     margin-top: 20px;
     font-family: 'IBM Plex Mono', monospace;
     position: relative;
     overflow: hidden;
-    border-right: 2px solid #EF45FF;
+    border-right: 2px solid var(--main-title);
     font-size: 100%;
     white-space: nowrap;
 }
@@ -133,20 +146,20 @@ h2{
 }
 @keyframes cursorDeTexto{
     from{
-        border-right-color: #EF45FF;
+        border-right-color: var(--main-title);
     }
     to{
         border-right-color: transparent;
     }
 }
 
-button{
+#resumo{
     width: 190px;
     height: 54px;
     left: 250px;
     top: 20px;
-    color: #EF45FF;
-    background: #9FF22D;
+    color: var(--main-title);
+    background: var(--button-nav);
     border: none;
     border-radius: 4%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -154,14 +167,14 @@ button{
 
 #resumo:hover{
     background-color: #C98DE3;
-    color: #B1E6D8;
+    color: var(--bg-before);
 }
 
 .description::before{
     position: absolute;
     content: '';
     inset: 0;
-    background: linear-gradient(to bottom right,#EF45FF,#C98DE3, #9FF22D,#B1E6D8);
+    background: linear-gradient(to bottom right,var(--main-title),#C98DE3, var(--button-nav),var(--bg-before));
     z-index: -1;
     margin: -6px;
     border-radius: 8px;
@@ -170,10 +183,10 @@ button{
 .pqtrampar{
     position: absolute;
     width: 1100px;
-    height: 798px;
+    height: 508px;
     left: 176px;
     top: 447px;
-    background: #FFFFFF;
+    background: var(--bg-after);
 }
 strong, h4{
     font-family: 'Roboto', sans-serif;
@@ -182,7 +195,7 @@ strong, h4{
     position: absolute;
     content: '';
     inset: 0;
-    background: linear-gradient(to bottom right,#EF45FF,#C98DE3, #9FF22D,#B1E6D8);
+    background: linear-gradient(to bottom right,var(--main-title),#C98DE3, var(--button-nav),var(--bg-before));
     z-index: -1;
     margin: -6px;
     border-radius: 8px;
@@ -193,12 +206,12 @@ strong, h4{
 }
 
 ::-webkit-scrollbar-track{
-    background: #fff;
+    background: var(--bg-after);
     border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #EF45FF;
+    background: var(--main-title);
     border-radius: 30px;
 }
 
@@ -206,6 +219,7 @@ strong, h4{
     width: 320px;
     height: 264px;
     margin-top: 100px;
+    color: var(--main-color-text);
 }
 
 #pq{
@@ -221,11 +235,16 @@ strong, h4{
     font-size: 20px;
     line-height: 21px;
     /* identical to box height */
-    color: #EF45FF;
+    color: var(--main-title);
 }
 
 #theme-button{
     margin-top: 3px;
     margin: 5px;
     padding-right: 3px;
+}
+
+#topinho{
+    position: relative;
+    top: 900px
 }
