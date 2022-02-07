@@ -1,140 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=IBM+Plex+Mono:wght@300&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Roboto:wght@300&family=Varela+Round&display=swap');
 
-:root{
-    --main-color-text: #000;
-    --button-nav: #9FF22D;
-    --main-title: #EF45FF;
-    --bg-before: #B1E6D8;
-    --bg-after:#fff;
-}
 
+/* ==== variables ==== */
 body{
-    background-color: var(--bg-before);
-    transition: background 0.2s linear;
+    --bg: url("");
+    --color-block: #93D8F9;
+    --color-footer: ;
+    --color-main-text: #302F53;
+    --title-color: #000;
+    --name-color: #000;
+    --btn-color: #FE99B5;
+    --color-block-gradient: #bfe7fa;
+    --btn-color-hover: #302F53;
+    --text-btn-color-hover: #FE99B5;
+    --text-btn-color: #302F53;
+    --main-font: 'Roboto', sans-serif;
+    --title-font: 'Varela Round', sans-serif;
+    --first-font: 'IBM Plex Mono', monospace;
 }
 
 body.dark{
-    --main-color-text: #fff;
-    --bg-before: #000;
-    --button-nav: #500172;
-    --main-title: violet;
-    --bg-after: grey;
+    --bg: url("");
+    --color-block: #302F53;
+    --color-footer: ;
+    --color-main-text: #C4C4C4;
+    --title-color: #000;
+    --name-color: #fff;
+    --btn-color: #302f53;
+    --color-block-gradient: #474669;
+    --btn-color-hover: #FE99B5;
+    --text-btn-color-hover: #302F53;
+    --text-btn-color: #FE99B5;
 }
 
-nav.dark, .cabecalho.dark{
-    background-color: #500172;
-
-}
-
-.checkbox{
-    opacity: 0;
-    position: absolute;
-}
-
-.label{
-    background-color: #000;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px;
-    position: relative;
-    height: 20px;
-    width: 40px;
-    transform: scale(1.5);
-    margin: 5px;
-    margin-left: 13px;
-
-}
-
-.label .ball{
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    height: 16px;
-    width: 16px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-}
-.checkbox:checked + .label .ball{
-    transform: translate(16px);
-}
-
-.fa-moon{
-    color: #f1c40f;
-}
-.fa-sun{
-    color: #f39c12;
-}
-section{
-    background-color: var(--bg-after);
-}
-
-.nav, .cabecalho{
-    background-color: var(--button-nav);
-    padding-right: 6px;
-}
-
-#cabecalho:hover{
-    color: var(--main-title);
-}
-
-#cabecalho{
-    margin-left: 6px;
-    margin-right: 6px;
-    color: var(--main-color-text);
-}
-
-.description{
-    
-    position: absolute;
-    width: 1105px;
-    height: 364px;
-    left: 161px;
-    top: 63px;
-
-background: var(--bg-after);
-}
-
-.texto{
-    position: absolute;
-    width: 559px;
-    height: 364px;
-    padding-top: 50px;
-    padding-left: 50px;
-}
-
-
-img{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    left: 650px;
-    top: 20px;
-    border-radius: 100%;
-}
-
-h2{
-    color: var(--main-color-text);
-    font-family: 'Roboto', sans-serif;
-}
+/* === Efeito Digitação === */
 
 .linha{
-    color: var(--main-color-text);
-    margin-top: 20px;
-    font-family: 'IBM Plex Mono', monospace;
+    color: var(--name-color);
+    font-family: var(--first-font);
     position: relative;
     overflow: hidden;
-    border-right: 2px solid var(--main-title);
     font-size: 100%;
     white-space: nowrap;
 }
 
 .efeito-digitacao{
-    animation: maquinaDeEscrever 8s steps(50) 1s normal both,
+    animation: maquinaDeEscrever 7s steps(50) 1s normal both,
     cursorDeTexto 500ms steps(80) infinite normal;
-    animation-iteration-count: infinite;
+    
+}
+.efeito-digitacao1{
+    animation: maquinaDeEscrever 7s steps(50) 6s normal both,
+    cursorDeTexto 500ms steps(80) infinite normal;
+
 }
 @keyframes maquinaDeEscrever{
     from{
@@ -153,98 +71,5 @@ h2{
     }
 }
 
-#resumo{
-    width: 190px;
-    height: 54px;
-    left: 250px;
-    top: 20px;
-    color: var(--main-title);
-    background: var(--button-nav);
-    border: none;
-    border-radius: 4%;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+/*============================================================================================*/
 
-#resumo:hover{
-    background-color: #C98DE3;
-    color: var(--bg-before);
-}
-
-.description::before{
-    position: absolute;
-    content: '';
-    inset: 0;
-    background: linear-gradient(to bottom right,var(--main-title),#C98DE3, var(--button-nav),var(--bg-before));
-    z-index: -1;
-    margin: -6px;
-    border-radius: 8px;
-}
-
-.pqtrampar{
-    position: absolute;
-    width: 1100px;
-    height: 508px;
-    left: 176px;
-    top: 447px;
-    background: var(--bg-after);
-}
-strong, h4{
-    font-family: 'Roboto', sans-serif;
-}
-.pqtrampar::before{
-    position: absolute;
-    content: '';
-    inset: 0;
-    background: linear-gradient(to bottom right,var(--main-title),#C98DE3, var(--button-nav),var(--bg-before));
-    z-index: -1;
-    margin: -6px;
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar{
-    width: 10px;
-}
-
-::-webkit-scrollbar-track{
-    background: var(--bg-after);
-    border-radius: 30px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: var(--main-title);
-    border-radius: 30px;
-}
-
-.col-pqtrampar{
-    width: 320px;
-    height: 264px;
-    margin-top: 100px;
-    color: var(--main-color-text);
-}
-
-#pq{
-    position: absolute;
-    width: 300px;
-    height: 21px;
-    left: 50px;
-    top: 43px;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 21px;
-    /* identical to box height */
-    color: var(--main-title);
-}
-
-#theme-button{
-    margin-top: 3px;
-    margin: 5px;
-    padding-right: 3px;
-}
-
-#topinho{
-    position: relative;
-    top: 900px
-}
