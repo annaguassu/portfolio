@@ -4,85 +4,122 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
-    <title>Portfólio - Ana Beatriz</title>
+    <title>Portfolio - Ana Beatriz</title>
 </head>
 <body>
-    <header class="cabecalho">
-        <nav  class="nav justify-content-end">
-            <a id="cabecalho" href="#">Home</a>
-            <a id="cabecalho" href="#">Por que trabalhar comigo?</a>
-            <a id="cabecalho" href="#">Projetos</a>
-            <a id="cabecalho" href="#">Contatos</a>
-            <input type="checkbox" class="checkbox" id="chk">
-            <label class="label" for="chk">
-            <i class="fas fa-moon" ></i>
-            <i class="fas fa-sun" ></i>
-            <div class="ball"></div>
+    <header class="l-header">
+        <nav class="navbar justify-content-end navbar-expand-lg navbar-light bg-light">
+            <a class="nav-item" href="#home">Home</a>
+            <a class="nav-item" href="#pq">Por que trabalhar comigo?</a>
+            <a class="nav-item" href="#projects">Projetos</a>
+            <a class="nav-item" href="#contact">Contatos</a>
+            <input type="checkbox">
+            <label>
+                <i class="."></i>
+                <i class="."></i>
+                <div class="ball"></div>
             </label>
         </nav>
     </header>
-    <section class="description">
-        <div class="col texto">
-            <h2>Olá! Sou a Ana Beatriz</h2>
-            <p class="linha efeito-digitacao" style="width: 24em;"><strong>Graduanda em Análise e Desenvolvimento de Sistemas.</strong></p>
-            <button id="resumo"><strong>Baixe Aqui o Resumo</strong></button>
+    
+    <a class="scrolltop" href="#" id="scroll-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+    <main class="l-main">
+        <!--Home-->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid" id="home">
+                <h1 id="ola">Olá!</h1>
+                <h2 id="nome"> Meu nome é Ana Beatriz</h2>
+                <p class="linha efeito-digitacao mt-0 mb-1"><strong>Graduanda em Análise e Desenvolvimento</strong></p>
+                <p class="linha efeito-digitacao1 mt-0 mb-1"><strong> de Sistemas.</strong></p>
+                <button class="btn-resumo"><strong>Baixe aqui o Resumo</strong></button>
+            </div>
+        </section>
+        <!--Por que trabalhar comigo?-->
+        <section class="pq section bd-container" id="pq">
+            <div class="pq__container bd-grid">
+                <h2>Por que trabalhar comigo?</h2>
+                <div class="pq__content">
+                    <h3>Pipipi popopo</h3>
+                    <p class="content__description">blablablablablablabla</p>
+                </div>
+                <div class="pq__content">
+                    <h3>Pipipi popopo</h3>
+                    <p class="content__description">blablablablablablabla</p>
+                </div>
+                <div class="pq__content">
+                    <h3>Pipipi popopo</h3>
+                    <p class="content__description">blablablablablablabla</p>
+                </div>
+            </div>
+        </section>
+        <!--Projetos-->
+        <section class="projects section bd-container" id="projects">
+            <span>Mais repositórios no meu GitHub 
+                <br> Clique para conhecer. :)
+            </span>
+            <h2>Principais Projetos</h2>
+            <div class="pq__content bd-grid">
+                <a href="#">Projeto 1</a>
+                <a href="#">Projeto 2</a>
+                <a href="#">Projeto 3</a>
+            </div>
+            <div class="pq__content">
+                <a href="#">Projeto 4</a>
+                <a href="#">Projeto 5</a>
+                <a href="#">Projeto 6</a>
+            </div>
+            <div class="pq__content">
+                <a href="#">Projeto 7</a>
+                <a href="#">Projeto 8</a>
+                <a href="#">Projeto 9</a>
+            </div>
+        </section>
+        <!--Contatos-->
+        <section class="contact section bd-container" id="contact">
+            <div class="contact-container bd-grid">
+                <div class="contact__content">
+                    <h2 class="section-title">Contato</h2>
+                    <p class="section-description">Se quiser conversar comigo, pode me enviar um e-mail!</p>
+                </div>
+
+                <div class="contact__button">
+                    <a href="mailto:annaguassu@gmail.com?" class="button">Enviar e-mail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer section bd-container">
+        <div class="footer__container bd-grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">Ana Beatriz Guassu Lopes</a>
+                <span class="footer__description">Redes Sociais</span>
+                <div>
+                    <a href="#" class="footer__social"><i class=""></i></a>
+                    <a href="#" class="footer__social"><i class=""></i></a>
+                    <a href="#" class="footer__social"><i class=""></i></a>
+                </div>
+            </div>
+            <div class="footer__content">
+               <h3 class="footer__title">Menu</h3>
+                <ul>
+                    <li><a href="#home" class="footer__link"></a>Home</li>
+                    <li><a href="#pq" class="footer__link"></a>Por Que Trabalhar Comigo?</li>
+                    <li><a href="#projects" class="footer__link"></a>Projetos</li>
+                    <li><a href="#contact" class="footer__link"></a>Contato</li>
+                </ul>
+            </div>
         </div>
-        <div class="col img">
-            <div id="img1">
-            <div id="img2">
-                <figure>
-                <img src="https://avatars.githubusercontent.com/u/79941051?v=4">
-                </figure>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <div>
-        <button id="topinho">Topo!</button>
-    </div>
-    <!--Por que trabalhar comigo?-->
-    <section class="row pqtrampar">
-            <h4 id="pq">Por que trabalhar comigo?</h4>
-            <div class="col-pqtrampar" style="margin-left: 100px;">
-                <h4>Metodologias Ágeis</h4>
-            </div>
-            <div class="col-pqtrampar">
-                <h4>Metodologias Ágeis</h4>
-            </div>
-            <div class="col-pqtrampar">
-                <h4>Metodologias Ágeis</h4>
-            </div>
-    </section>
-    <!--Meus Projetos-->
-    <section>
-
-    </section>
-    <!--Contatos-->
-    <section>
-
-    </section>
-    <footer>
-        <a>
-            
-        </a>
-        <a>
-
-        </a>
-        <a>
-
-        </a>
+        <p class="footer__copy">&#169; 2022 Ana Beatriz Guassu Lopes. </p>
     </footer>
     <script src="main.js"></script>
-    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</div>
+<script src="https://kit.fontawesome.com/daeda8711b.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
