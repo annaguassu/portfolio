@@ -4,120 +4,142 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Portfolio - Ana Beatriz</title>
 </head>
 <body>
     <header class="l-header">
-        <nav class="navbar justify-content-end navbar-expand-lg navbar-light bg-light">
-            <a class="nav-item" href="#home">Home</a>
-            <a class="nav-item" href="#pq">Por que trabalhar comigo?</a>
-            <a class="nav-item" href="#projects">Projetos</a>
-            <a class="nav-item" href="#contact">Contatos</a>
-            <input type="checkbox">
-            <label>
-                <i class="."></i>
-                <i class="."></i>
-                <div class="ball"></div>
-            </label>
-        </nav>
+        <nav class="navbar justify-content-end" id="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre Mim</a></li>
+                <li class="nav-item"><a class="nav-link" href="#pq">Por que trabalhar comigo?</a></li>
+                <li class="nav-item"><a class="nav-link" href="#proj">Meus Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                <li class="nav-toggle">
+                    <input type="checkbox" id="chk" class="checkbox">
+                    <label class="label" for="chk">
+                        <i class="."></i>
+                        <i class="."></i>
+                        <div class="ball"></div>
+                    </label>
+                </li>
+            </ul>
+        </nav>   
     </header>
-    
-    <a class="scrolltop" href="#" id="scroll-top">
-        <i class="fas fa-chevron-up"></i>
+    <a class="scrolltop" href="#nav">
+        <i class="# icon-scrolltop"></i>
     </a>
     <main class="l-main">
-        <!--Home-->
-        <section class="home" id="home">
-            <div class="home__container bd-container bd-grid" id="home">
-                <h1 id="ola">Olá!</h1>
-                <h2 id="nome"> Meu nome é Ana Beatriz</h2>
-                <p class="linha efeito-digitacao mt-0 mb-1"><strong>Graduanda em Análise e Desenvolvimento</strong></p>
-                <p class="linha efeito-digitacao1 mt-0 mb-1"><strong> de Sistemas.</strong></p>
-                <button class="btn-resumo"><strong>Baixe aqui o Resumo</strong></button>
-            </div>
-        </section>
-        <!--Por que trabalhar comigo?-->
-        <section class="pq section bd-container" id="pq">
-            <div class="pq__container bd-grid">
-                <h2>Por que trabalhar comigo?</h2>
-                <div class="pq__content">
-                    <h3>Pipipi popopo</h3>
-                    <p class="content__description">blablablablablablabla</p>
-                </div>
-                <div class="pq__content">
-                    <h3>Pipipi popopo</h3>
-                    <p class="content__description">blablablablablablabla</p>
-                </div>
-                <div class="pq__content">
-                    <h3>Pipipi popopo</h3>
-                    <p class="content__description">blablablablablablabla</p>
-                </div>
-            </div>
-        </section>
-        <!--Projetos-->
-        <section class="projects section bd-container" id="projects">
-            <span>Mais repositórios no meu GitHub 
-                <br> Clique para conhecer. :)
-            </span>
-            <h2>Principais Projetos</h2>
-            <div class="pq__content bd-grid">
-                <a href="#">Projeto 1</a>
-                <a href="#">Projeto 2</a>
-                <a href="#">Projeto 3</a>
-            </div>
-            <div class="pq__content">
-                <a href="#">Projeto 4</a>
-                <a href="#">Projeto 5</a>
-                <a href="#">Projeto 6</a>
-            </div>
-            <div class="pq__content">
-                <a href="#">Projeto 7</a>
-                <a href="#">Projeto 8</a>
-                <a href="#">Projeto 9</a>
-            </div>
-        </section>
-        <!--Contatos-->
-        <section class="contact section bd-container" id="contact">
-            <div class="contact-container bd-grid">
-                <div class="contact__content">
-                    <h2 class="section-title">Contato</h2>
-                    <p class="section-description">Se quiser conversar comigo, pode me enviar um e-mail!</p>
-                </div>
+        <div id="home"></div>
+        <section class="home container bd-grid">
+            <div>
+                <h1 id="ola"><strong>Olá</strong></h1>
+                <h2 id="nome">Meu nome é Ana Beatriz</h2>
+                <p class="linha efeito-digitacao">Graduanda em Análise e Desenvolvimento de Sistemas
+                </p>
+                <button class="btn-resume">Baixe aqui o Resumo</button>
 
-                <div class="contact__button">
-                    <a href="mailto:annaguassu@gmail.com?" class="button">Enviar e-mail</a>
-                </div>
             </div>
         </section>
-    </main>
-    <footer class="footer section bd-container">
-        <div class="footer__container bd-grid">
-            <div class="footer__content">
-                <a href="#" class="footer__logo">Ana Beatriz Guassu Lopes</a>
-                <span class="footer__description">Redes Sociais</span>
-                <div>
-                    <a href="#" class="footer__social"><i class=""></i></a>
-                    <a href="#" class="footer__social"><i class=""></i></a>
-                    <a href="#" class="footer__social"><i class=""></i></a>
-                </div>
+        <section class="about container bd-grid" id="about">
+            <h2 class="title">Sobre Mim</h2>
+            <p class="description"> Estudo Análise e Desenvolvimento de Sistemas na Fatec de Taquaritinga - SP.
+                <br> Além disso, concluí o ensino médio na Etec de Matão, concomitante ao curso técnico
+                <br> de Informática para internet, na qual aprendi:
+            </p>
+            <div class="lista">
+            <ul>
+                <li class="about-list"><i class=""></i>Desenvolvimento de Jogos e Web com PHP</li>
+                <li class="about-list"><i class=""></i>Web Forms com C#</li>
+                <li class="about-list"><i class=""></i>CorelDraw e Photoshop</li>
+                <li class="about-list"><i class=""></i>Banco de Dados e Integração ao site (CRUD)</li>
+                <li class="about-list"><i class=""></i>Metodologias Ágeis</li>
+            </ul>
             </div>
-            <div class="footer__content">
-               <h3 class="footer__title">Menu</h3>
-                <ul>
-                    <li><a href="#home" class="footer__link"></a>Home</li>
-                    <li><a href="#pq" class="footer__link"></a>Por Que Trabalhar Comigo?</li>
-                    <li><a href="#projects" class="footer__link"></a>Projetos</li>
-                    <li><a href="#contact" class="footer__link"></a>Contato</li>
-                </ul>
+
+            <div class="about-links">
+                <strong>
+                <a href="#" class="link">Meu GitHub</a>
+                <a href="#" class="link">Meu LinkedIn</a>
+                </strong>
+            </div>
+
+        </section>
+        <section class="pq container bd-grid" id="pq">
+        <div class="row">
+            <h2 class="title-card col">Por que Trabalhar <br>Comigo?</h2>
+            <div class="card">
+            <div class="col">
+                <h3 class="card-subtitle">Pipipi Popopo</h3>
+                <p class="card-text iii" > blablabla</p>
+            </div>
+            </div>
+            <div class="card">
+            <div class="col">
+                <h3 class="card-subtitle">Pipipi Popopo</h3>
+                <p class="card-text iii" > blablabla</p>
+            </div>
+            </div>
+            <div class="card">
+            <div class="col">
+                <h3 class="card-subtitle">Pipipi Popopo</h3>
+                <p class="card-text iii" > blablabla</p>
+            </div>
             </div>
         </div>
-        <p class="footer__copy">&#169; 2022 Ana Beatriz Guassu Lopes. </p>
+        </section>
+        <section class="proj container bd-grid" id="proj">
+            <h2 class="title">Meus Projetos</h2>
+            <div class="container">
+            <div class="iai">
+                <div class="col projetos">
+                    <a href="#" class="proj-link">MarmaMia TCC</a>
+                    <a href="#" class="proj-link">Projeto 1</a>
+                    <a href="#" class="proj-link">Projeto 1</a>
+                </div>
+                <div class="col">
+                    <a href="#" class="proj-link">Projeto 1</a>
+                    <a href="#" class="proj-link">Projeto 1</a>
+                    <a href="#" class="proj-link">Projeto 1</a>
+                </div>
+            </div>
+            <div class="mini-description">
+            <span>Existem mais projetos em andamento no meu GitHub
+            <br>Visite <a href="https://github.com/annaguassu">aqui</a> para dar uma olhada :)</span>
+            </div>
+            </div>
+
+        </section>
+        <section class="contact container bd-grid" id="contact">
+        <div class="glass">
+            <h2 class="title" style="text-align: center;">Contato</h2>
+            <p class="subtitle" style="text-align: center;">Se quiser conversar comigo, pode me enviar um e-mail</p>
+            <div class="btn-contact" style="text-align: center;">
+            <a class="link" href="mailto:annaguassu@gmail.com?"><i class="#"></i>Enviar E-mail</a>
+            </div>
+        </div>
+        </section>
+    </main>
+    <footer class="rodape footer container-fluid">
+        <div>
+            <a class="footer-logo" href="#">annabeatus</a><br><br>
+            <span class="footer-description">Redes Sociais</span><br>
+            <div>
+                <a href="https://github.com/annaguassu" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div>
+                <p class="local">Matão, SP - Brasil.</p>
+            </div>
+        </div>
+        <p class="copyright" style="text-align: center;">&#169; 2022 Ana Beatriz Guassu Lopes. </p>
     </footer>
-    <script src="main.js"></script>
-<script src="https://kit.fontawesome.com/daeda8711b.js" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="main.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
