@@ -9,9 +9,14 @@
     <title>Portfolio - Ana Beatriz</title>
 </head>
 <body>
-    <header class="l-header">
+
+    <a href="#" class="scrolltop" id="scroll-top">
+        <i class='bx bx-chevron-up scrolltop-icon'></i>
+    </a>
+
+    <header class="l-header" id="header">
         <nav class="navbar justify-content-end" id="nav">
-            <ul class="nav-list">
+            <ul class="nav-list" id="nav-menu">
                 <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">Sobre Mim</a></li>
                 <li class="nav-item"><a class="nav-link" href="#pq">Por que trabalhar comigo?</a></li>
@@ -26,6 +31,10 @@
                     </label>
                 </li>
             </ul>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="bx bx-menu"></i>
+            </div>
         </nav>   
     </header>
     <a class="scrolltop" href="#nav">
@@ -34,9 +43,9 @@
     <main class="l-main">
         <div id="home"></div>
         <section class="home container bd-grid">
-            <div>
-                <h1 id="ola"><strong>Olá</strong></h1>
-                <h2 id="nome">Meu nome é Ana Beatriz</h2>
+            <div class="home__container">
+                <h1 class="home__title" id="ola"><strong>Olá</strong></h1>
+                <h2 class="home__subtitle" id="nome">Meu nome é Ana Beatriz</h2>
                 <p class="linha efeito-digitacao">Graduanda em Análise e Desenvolvimento de Sistemas
                 </p>
                 <button class="btn-resume">Baixe aqui o Resumo</button>
@@ -72,20 +81,27 @@
             <h2 class="title-card col">Por que Trabalhar <br>Comigo?</h2>
             <div class="card">
             <div class="col">
-                <h3 class="card-subtitle">Pipipi Popopo</h3>
-                <p class="card-text iii" > blablabla</p>
+                <h3 class="card-subtitle">Foco e Disciplina</h3>
+                <p class="card-text iii" >Nos primeiros semestres da faculdade, escrevia meus códigos no caderno.
+                    Entretanto, desenvolvimento permanece sendo minha paixão e, esse empecilho, não permitiu que eu desistisse.
+                    Agora, treino todos os dias para me manter atualizada e garantir estar dentro do máximo de tendencias e técnicas possiveis.
+                </p>
             </div>
             </div>
             <div class="card">
             <div class="col">
-                <h3 class="card-subtitle">Pipipi Popopo</h3>
-                <p class="card-text iii" > blablabla</p>
+                <h3 class="card-subtitle">Autodidata</h3>
+                <p class="card-text iii" >A maior parte de programação, aprendi sem a supervisão de um professor,
+                    na qual eu mesma guiei meus estudos, por meio de experimentos, vídeos, repositórios, etc.
+                </p>
             </div>
             </div>
             <div class="card">
             <div class="col">
-                <h3 class="card-subtitle">Pipipi Popopo</h3>
-                <p class="card-text iii" > blablabla</p>
+                <h3 class="card-subtitle">Metodologias Ágeis</h3>
+                <p class="card-text iii" >Gerencio minhas tarefas e desempenho através de Metodologias Ágeis, com foco no cumprimento de prazos
+                    e na qualidade de cada projeto, sempre pensando no cliente final e visando garantir a eficiência e não só a eficácia.
+                </p>
             </div>
             </div>
         </div>
@@ -95,7 +111,7 @@
             <div class="container">
             <div class="iai">
                 <div class="col projetos">
-                    <a href="https://github.com/annaguassu/TCC-Etec-MarmaMia-" class="proj-link">MarmaMia TCC</a>
+                    <a href="#" class="proj-link">MarmaMia TCC</a>
                     <a href="#" class="proj-link">Projeto 1</a>
                     <a href="#" class="proj-link">Projeto 1</a>
                 </div>
@@ -123,15 +139,14 @@
         </section>
     </main>
     <footer class="rodape footer container-fluid">
-        <div>
+        <div class="footer-content">
             <a class="footer-logo" href="#">annabeatus</a><br><br>
             <span class="footer-description">Redes Sociais</span><br>
             <div>
-                <a href="https://github.com/annaguassu" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/annaguassu" class="social-link"><i class="fab fa-github"></i></a></li>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a></li>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
             </div>
-
             <div>
                 <p class="local">Matão, SP - Brasil.</p>
             </div>
