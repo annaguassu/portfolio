@@ -76,6 +76,10 @@ ul{
     text-decoration: none;
 }
 
+.nav-toggle{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
 .active{
     color: var(--color-link-hover);
 }
@@ -86,7 +90,7 @@ ul{
 }
 
 .scroll-header{
-    box-shadow: 0px 2px 4px #000 ;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.479) ;
 }
 
 .scrolltop{ /*botao flutuante*/
@@ -113,6 +117,11 @@ ul{
     visibility: visible;
     bottom: 1.5rem;
 }
+
+/* Show menu */
+.show-menu{
+    top: 3rem;
+  }
 
 /* ======================================================================== */
 
@@ -235,19 +244,29 @@ ul{
 /* ==== Por que trabalhar comigo? ==== */
 
 .pq{
-    height: 20rem;
+    height: 30rem;
 }
 
+.card-text, .card-subtitle{
+    text-align: center;
+}
 .card{
     margin-top: 5.5rem;
-    margin-right: 3rem;
-    height: 200px;
-    width: 200px;
+    margin-right: 1rem;
+    height: 335px;
+    width: 270px;
     background-color: var(--bg-color);
+}
+
+.card:hover{
+    top: 5px;
+    width: 300px;
+    height: 365px;
 }
 
 .card-subtitle{
     margin-top: 1rem;
+    margin-bottom: 1rem;
     color: var(--color-main-text);
 }
 
@@ -324,5 +343,10 @@ ul{
 
 .footer-logo{
     padding-top:rem;
+}
+
+.copyright{
+    z-index: 100;
+    top: 5rem;
 }
 /* ======================================================================== */
