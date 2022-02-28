@@ -1,187 +1,154 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Roboto:wght@300&family=Varela+Round&display=swap');
 
 body{
-    --color-main-text: #302F53;
-    --color-title: #000;
-    --color-link: #000;
-    --color-link-hover: #FE99B5;
-    --bg-color: #fff;
-    --btn-color: #fe99b5;
-    --btn-color-hover: #302f53;
+    --main-color: #fff;
+    --main-text-color: #302F53;
     --main-font: 'Roboto', sans-serif;
     --tab-font: 'IBM Plex Mono', monospace;
     --title-font: 'Varela Round', sans-serif;
-    margin: 3 0 0;
+    --title-color: #000;
+    --link-color: #000;
+    --glass-color: rgba(202, 149, 209, 0.5) 48.57%, rgba(130, 189, 250, 0.5) 97.18%;
+    --second-color: #CA95D1;;
     font-family: var(--main-font);
-    background-color: var(--bg-color);
-    color: var(--color-main-text);
+    background-color: var(--main-color);
+    color: var(--main-text-color);
     font-size: .938rem;
-    line-height: 1.6;
+    height: 100vh;
+    width: 100vw;
 }
 
-body.dark{ /*main.js*/
-    --color-main-text: #D8D8D8;
-    --color-title: #fff;
-    --color-link: #fff;
-    --color-link-hover: #FE99B5;
-    --bg-color: #090911;
-    --btn-color: #302f53;
-    --btn-color-hover: #fe99b5;
-    --main-font: 'Roboto', sans-serif;
-    --tab-font: 'IBM Plex Mono', monospace;
-    --title-font: 'Varela Round', sans-serif;
+body.dark{
+    --main-color: #000;
+    --main-text-color: #D8D8D8;
+    --title-color: #fff;
+    --link-color: #d8d8d8;
+    --second-color: #FE99B5;
+    --glass-color: rgba(202, 149, 209, 0.5) 48.57%, rgba(95, 55, 146, 0.5) 97.18%;
 }
 
-html{
-    scroll-behavior: smooth;
-}
+/*layout*/
 
-ul{
-    list-style: none;
-}
-
-.l-header{
-    width: 100%;
-    position: fixed;
-    z-index: 100; /*coloca por cima de tudo*/
-    top: 0;
-    left: 0;
-}
-
-/* ==== Barra de Navegação ==== */
-
-.navbar{
-    background-color: var(--bg-color);
-    height: 4rem;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-list{
+.section-home{
+    height: 100vh;
     display: flex;
-}
-
-.nav-link, .nav-logo, .nav-toggle{
-    color: var(--color-main-text);
-    font-weight: 500;
-}
-
-.nav-link, .nav-logo, .footer-logo{
-    transition: .3s;
-    color: var(--color-title);
-}
-
-.nav-link:hover, .nav-logo:hover, .footer-logo:hover{
-    color: var(--color-link-hover);
-    text-decoration: none;
-}
-
-.nav-toggle{
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-.active{
-    color: var(--color-link-hover);
-}
-
-.nav-toggle{
-    font-size: 1.3rem;
-    cursor: pointer;
-}
-
-.scroll-header{
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.479) ;
-}
-
-.scrolltop{ /*botao flutuante*/
-    position: fixed; 
-    right: 1rem;
-    bottom: 50px;
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: .3rem;
 }
 
-.scrolltop:hover{
-    background-color: #fe99b5;
-    text-decoration: none;
-    border-radius: 100%;
+.scrollup{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    background-color: var(--second-color);
+    border-radius: 50px;
+    z-index: 100;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
-.icon-scrolltop{
-    font-size: 1.8rem;
-    color: var(--color-main-text)
-}
-.show-scroll{
-    visibility: visible;
-    bottom: 1.5rem;
+.bx-chevron-up{
+    color: #fff;
+    margin-left: 1px;
 }
 
-/* Show menu */
-.show-menu{
-    top: 3rem;
-  }
 
-/* ======================================================================== */
+.title{
+    color: var(--second-color);
+}
+/*==== barra de navegação ====*/
+.navbar{
+    position: fixed;
+    z-index: 100;
+    height: 3rem;
+    background: #f4f1f11e;
+    backdrop-filter: blur(50px);
+    
+}
+.nav-link{
+    color:#CA95D1;
+    transition: 0.5s;
+}
+.nav-link:hover{
+    color:#82BDFA;
+}
 
-/* ==== Home ==== */
+.bx-sun{
+    color: #ffd95e;
+    font-size: 1.5rem;
+    margin-top: .5rem;
+}
 
-.home{
-    height: 35rem;
-    margin-left: 7rem;
+.nav-toggler{
+    color: var(--main-text-color);
+}
+
+
+
+/*==== Home ====*/
+.glass{
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
+    height: 30rem;
+    border-radius: 10px;
+    background: radial-gradient(89.52% 212.93% at 13.38% 10.48%, var(--glass-color));
+    backdrop-filter: blur(4px);
+    box-shadow: rgba(0, 0, 0, 0.329);
+}
+
+.tab{
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.btn-resumo{
+    color: var(--glass-color);
+    background: var(--main-color);
+    border:none;
+    border-radius: 3px;
+    width: 10rem;
+    height: 3rem;
+    margin-top: 1.5rem;
+    font-family: var(--title-font);
+}
+
+.btn-resumo:hover{
+    background-color: var(--second-color);
+    color: var(--main-color);
+    border: var(--glass-color);
 }
 
 #ola{
-    font-size: 4rem;
-    color: var(--main-text-color);
-    margin-bottom: .5rem;
-    padding-top: 12rem;
+    font-family: var(--title-font);
+    font-size: 3rem;
 }
 
-#nome{
-    font-size: 2.25rem;
-    color: var(--name-color);
-    margin-bottom: 1rem;
-}
 
-.btn-resume{
-    border: none;
-    color: var(--color-main-text);
-    background-color: var(--btn-color);
-    display: inline-block;
-    padding: .75rem 1rem;
-    border-radius: .5rem;
-    transition: .3s;
-    width: 200px;
-    margin-top: 1.5rem;
-}
+/* ==== efeito digitação ==== */
 
-.btn-resume:hover{
-    background-color: var(--btn-color-hover);
-    color: var(--btn-color);
-    border: none;
-    transition: 3ms;
-}
-
-/* ==== Efeito Digitação ==== */
 .linha{
-    color: var(--color-title);
+    color: var(--title-color);
     font-family: var(--tab-font);
     position: relative;
     overflow: hidden;
     font-size: 100%;
     white-space: nowrap;
+    margin: 0;
     
 }
 
 .efeito-digitacao{
-    animation: maquinaDeEscrever 7s steps(50) 1s normal both,
+    animation: maquinaDeEscrever 4s steps(50) 1s normal both,
     cursorDeTexto 500ms steps(80) infinite normal;
     
 }
 .efeito-digitacao1{
-    animation: maquinaDeEscrever 7s steps(50) 6s normal both,
+    animation: maquinaDeEscrever 5s steps(50) 5s normal both,
     cursorDeTexto 500ms steps(80) infinite normal;
 
 }
@@ -196,7 +163,7 @@ ul{
 }
 @keyframes cursorDeTexto{
     from{
-        border-right-color: var(--color-title);
+        border-right-color: var(--title-color);
     }
     to{
         border-right-color: transparent;
@@ -204,149 +171,87 @@ ul{
 }
 
 /*===============================================================================================*/
-/* ======================================================================== */
 
-/* ==== About Me ==== */
+/* ==== About me ==== */
 
-.title{
-    font-size: 1.8rem;
-    padding-top: 4rem;
+.about{
+    margin-top: 5rem;
+    height: 70vh;
+    margin-left: 7rem;
+    padding-bottom: 3rem;
 }
 
 .description{
-    font-size: .978rem;
-    margin-top: 2.5rem;
-}
-
-.about{
-    height: 25rem;
+    margin-left: 2rem;
+    padding-top: 2rem;
 }
 
 .about-links{
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
+    padding-top: 2rem;
 }
 
 .link{
-    color: var(--main-text-color);
-    margin-left: 1rem;
-    margin-right: 1rem;
-    transition: .3s;
+    padding-right: 1rem;
+    color: var(--link-color);
+    transition: 0.3s;
 }
 
 .link:hover{
-    color: var(--color-link-hover);
+    color: var(--second-color);
     text-decoration: none;
 }
-/* ======================================================================== */
+.lista{
+    list-style: none;
+    font-family: var(--tab-font);
+}
 
-/* ==== Por que trabalhar comigo? ==== */
+.about-img{
+    width: 10rem;
+    margin-left: 4rem;
+    padding-top: 3rem;
+}
+
+/* ==== por que trabalhar comigo? ==== */
+
+.col-3{
+    margin-left: 7rem;
+}
 
 .pq{
-    height: 30rem;
+    height: 50vh;
+    justify-content: center;
+
 }
 
-.card-text, .card-subtitle{
-    text-align: center;
-}
-.card{
-    margin-top: 5.5rem;
-    margin-right: 1rem;
-    height: 335px;
-    width: 270px;
-    background-color: var(--bg-color);
+#pq{
+    padding-top: 3rem;
 }
 
-.card:hover{
-    top: 5px;
-    width: 300px;
-    height: 365px;
+.card-title{
+    font-family: var(--tab-font);
+    font-size: 1.5rem;
 }
 
-.card-subtitle{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    color: var(--color-main-text);
-}
-
-.title-card{
-    margin-top: 7rem;
-    width: 10px;
-}
-/* ======================================================================== */
-/* ==== Meus Projetos ==== */
+/* ==== Meus projetos ==== */
 
 .proj{
-    height: 25rem;
+    height: 50vh;
+    margin-left: 7rem;
 }
 
-.iai{
-    text-align: center;
-    margin-top: 3rem;
+.title, .card{
+    margin-top: 4rem;
 }
-
-.proj-link{
-    margin-left: 3rem;
-    margin-right: 3rem;
-    color: var(--color-link);
-
-}
-
-.proj-link:hover{
-    color: var(--color-link-hover);
-    text-decoration: none;
-}
-
-.mini-description{
-    margin-top: 8rem;
-}
-
-.projetos{
+.container{
     margin-top: 5rem;
+    margin-left: 15em;
 }
-/* ======================================================================== */
-/* ==== Contato ==== */
+
+/* ==== Contact ==== */
 
 .contact{
-    height: 30rem;
-    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.glass{
-    position: absolute;
-    right: 450px;
-    width: 500px;
-    margin-top: 7rem;
-    background: rgba(147, 216, 249, 0.5);
-    backdrop-filter: blur(50px);
-    padding-bottom: 3rem;
-}
-/* ======================================================================== */
-/* ==== footer ==== */
-
-.rodape{
-    height: 190px;
-    background-color: #000;
-}
-.social-link{
-    width: 20px;
-}
-
-.footer-logo, .footer-description, .local, .copyright{
-    color: #D8D8D8;
-}
-.local{
-    margin-left: 1150px;
-    z-index: 100;
-}
-
-.footer-logo{
-    padding-top:rem;
-}
-
-.copyright{
-    z-index: 100;
-    top: 5rem;
-}
-/* ======================================================================== */
