@@ -9,13 +9,13 @@ body{
     --title-color: #000;
     --link-color: #000;
     --glass-color: rgba(202, 149, 209, 0.5) 48.57%, rgba(130, 189, 250, 0.5) 97.18%;
-    --second-color: #CA95D1;;
+    --second-color: #CA95D1;
+    --footer-color: 
     font-family: var(--main-font);
     background-color: var(--main-color);
     color: var(--main-text-color);
     font-size: .938rem;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
 }
 
 body.dark{
@@ -27,15 +27,28 @@ body.dark{
     --glass-color: rgba(202, 149, 209, 0.5) 48.57%, rgba(95, 55, 146, 0.5) 97.18%;
 }
 
-/*layout*/
+/*Layout*/
+@media (min-width: 40px) {  
+    .about-img{
+        width: 8rem;
+    }
 
-.section-home{
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+    .glass{
+        width: 30rem;
+        height: 15rem;
+        margin-left: 3rem;
+    }
+
+    .efeito-digitacao{
+        animation: none;
+        
+    }
+    .efeito-digitacao1{
+        animation: none;
+    
+    }
+        
+};
 
 .scrollup{
     width: 2rem;
@@ -60,6 +73,7 @@ body.dark{
 .title{
     color: var(--second-color);
 }
+
 /*==== barra de navegação ====*/
 .navbar{
     position: fixed;
@@ -67,7 +81,6 @@ body.dark{
     height: 3rem;
     background: #f4f1f11e;
     backdrop-filter: blur(50px);
-    
 }
 .nav-link{
     color:#CA95D1;
@@ -87,9 +100,24 @@ body.dark{
     color: var(--main-text-color);
 }
 
+.scroll-header{
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+} 
 
+.active{
+    color: #000;
+}
 
-/*==== Home ====*/
+/*Home*/
+/*é oq centraliza o painel*/
+.section-home{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .glass{
     justify-content: center;
     align-items: center;
@@ -98,7 +126,8 @@ body.dark{
     border-radius: 10px;
     background: radial-gradient(89.52% 212.93% at 13.38% 10.48%, var(--glass-color));
     backdrop-filter: blur(4px);
-    box-shadow: rgba(0, 0, 0, 0.329);
+    box-shadow: 0px 2px #96aeffa6;
+    border: 1px solid #96aeff86;
 }
 
 .tab{
@@ -171,33 +200,25 @@ body.dark{
 }
 
 /*===============================================================================================*/
-
-/* ==== About me ==== */
-
+/*about me*/
 .about{
     margin-top: 5rem;
-    height: 70vh;
+    height: 60vh;
     margin-left: 7rem;
-    padding-bottom: 3rem;
 }
 
 .description{
     margin-left: 2rem;
     padding-top: 2rem;
+    display: flex;
 }
 
-.about-links{
-    text-align: center;
-    padding-top: 2rem;
-}
-
-.link{
-    padding-right: 1rem;
+.link, .footer-brand{
     color: var(--link-color);
     transition: 0.3s;
 }
 
-.link:hover{
+.link:hover, .footer-brand:hover{
     color: var(--second-color);
     text-decoration: none;
 }
@@ -207,25 +228,27 @@ body.dark{
 }
 
 .about-img{
-    width: 10rem;
-    margin-left: 4rem;
-    padding-top: 3rem;
+    width: 14rem;
+ 
 }
 
 /* ==== por que trabalhar comigo? ==== */
 
 .col-3{
-    margin-left: 7rem;
+    margin-left: .3rem;
 }
 
+.col-2{
+    margin-top: 6rem;
+    margin-left:3rem;
+}
+#projects{
+    margin-top: -2rem;
+}
 .pq{
     height: 50vh;
     justify-content: center;
-
-}
-
-#pq{
-    padding-top: 3rem;
+    margin-top: 7rem;
 }
 
 .card-title{
@@ -233,25 +256,80 @@ body.dark{
     font-size: 1.5rem;
 }
 
+.contpq{
+    display: flex;
+}
+
 /* ==== Meus projetos ==== */
 
 .proj{
-    height: 50vh;
+    height: 40vh;
     margin-left: 7rem;
+    position: relative;
 }
 
 .title, .card{
     margin-top: 4rem;
 }
-.container{
-    margin-top: 5rem;
-    margin-left: 15em;
+
+.title{
+    margin-bottom: 3rem;
 }
+.formore{
+    margin-top: 3rem;
+}
+
+.contproj{
+    display: flex;
+}
+
+
 
 /* ==== Contact ==== */
 
 .contact{
+    height: 50vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
+
+.glass2{
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 12rem;
+    border-radius: 10px;
+    background: radial-gradient(89.52% 212.93% at 13.38% 10.48%, var(--glass-color));
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 2px #96aeffa6;
+    border: 1px solid #96aeff86;
+}
+
+.contact-initial, .c{
+    text-align: center;
+}
+
+.contact-initial{
+    margin-top: 20px;
+}
+.descriptionc{
+    margin-top:-2rem;
+    margin-left: 2rem ;
+}
+
+.btn-contact{
+    margin-left: 10rem;
+}
+
+/* ==== footer ==== */
+footer{
+    background-color: var(--second-color);
+    padding-bottom: .5rem;
+}
+
+.tab2{
+    margin-left: 3rem;
+}
+
