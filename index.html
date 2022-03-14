@@ -7,56 +7,57 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
     <title>Portfolio - Ana Beatriz</title>
 </head>
 <body>
     <!--Cabeçalho-->
-    <header>
-        <nav class="navbar fixed-top navbar-expand-lg justify-content-end">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <header id="header">
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
                 <i class='bx bx-menu bx-flip-vertical' ></i>
             </button>
-            <div class="collapse-navbar" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav">
                 <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">Sobre Mim</a></li>
                 <li class="nav-item"><a href="#pq" class="nav-link">Por que trabalhar comigo?</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Meus Projetos</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
                 <li>
-                    <a class="change-theme" id="change-theme">
-                        <i class='bx bx-sun bx-tada' alt="mudar tema" aria="mudar tema"></i></a>
+                    <a class="change-theme" >
+                        <i id="change-theme" class='bx bx-sun bx-tada' alt="mudar tema" aria="mudar tema"></i></a>
                 </li>
             </ul>
             </div>
         </nav>
+        
     </header>
     <main>
-        <a class="scrollup">
+        <a class="scrollup" href="#home">
             <i class='bx bx-chevron-up'></i>
         </a>
         <!--Home-->
         <section class="section-home home" id="home">
             <div class="glass">
                 <div class="tab">
-                    <h1 id="ola"><strong>Olá!</strong></h2>
-                    <h2 id="nome">Meu nome é Ana Beatriz</h3>
+                    <h1 id="ola"><strong>Olá!</strong></h1>
+                    <h2 id="nome">Meu nome é Ana Beatriz</h2>
                     <p class="linha efeito-digitacao">Graduanda em Análise e Desenvolvimento de Sistemas</p>
                     <p class="linha efeito-digitacao1">Junior UI designer & front-end dev</p>
                     <button class="btn-resumo">Baixar o Resumo</button>
                 </div>
-            </div>
+            </div>            
         </section>
-        <!--Sobre mim-->
+        <!--Sobre Mim-->
         <div id="about"></div>
-        
         <section class="section about" id="about">
-            <div class="row">
-                <div class="col">
+                <div class="col aboutme">
                     <h2 class="title about-initial">Sobre Mim</h2>
                     <p class="description">Estudo Análise e Desenvolvimento de Sistemas na Fatec de Taquaritinga - SP.
-                    <br> Além disso, concluí o ensino médio na Etec de Matão, concomitante ao curso técnico
-                    <br> de Informática para internet, na qual aprendi:
+                        <br>Além disso, concluí o ensino médio na Etec de Matão concomitante ao curso técnico
+                        <br>de Informática para Internet, na qual aprendi:
                     </p>
                     <ul class="lista">
                         <li class="about-list"><i class=""></i>Desenvolvimento de Jogos e Web com PHP</li>
@@ -66,41 +67,37 @@
                         <li class="about-list"><i class=""></i>Metodologias Ágeis</li>
                     </ul>
                 </div>
-                <div class="about-img col">
-                    <img class="about-img" src="img/desktop-computer.png">
+               <div class="about-img col float-right">
+                    <img class="about-img rounded float-right" src="img/desktop-computer.png">
                 </div>
-            </div>
-            <div class="about-links">
-                <strong>
-                <a href="#" class="link">Meu GitHub</a>
-                <a href="#" class="link">Meu LinkedIn</a>
-                </strong>
-            </div>
-
+               
+    
         </section>
         <!--Por que trabalhar comigo?-->
         <section class="section pq" id="pq">
-            <div class="row" id="espacinho">
-                <h2 class="title col-3">Por que trabalhar comigo?</h2>
-                <div class="col-2 card">
-                    <h3 class="card-title">Foco e Disciplina</h3>
-                    <p class="card-text">pipipipopopo</p>
-                </div>
-                <div class="col-2 card">
-                    <h3 class="card-title">Foco e Disciplina</h3>
-                    <p class="card-text">pipipipopopo</p>
-                </div>
-                <div class="col-2 card">
-                    <h3 class="card-title">Foco e Disciplina</h3>
-                    <p class="card-text">pipipipopopo</p>
+            <div class="container contpq">
+                <div class="row rowpq">
+                    <h2 class="title col-3">Por que trabalhar comigo?</h2>
+                    <div class="col-2">
+                        <h3 class="card-title">Foco e Disciplina</h3>
+                        <p class="card-text">pipipipopopo</p>
+                    </div>
+                    <div class="col-2">
+                        <h3 class="card-title">Foco e Disciplina</h3>
+                        <p class="card-text">pipipipopopo</p>
+                    </div>
+                    <div class="col-2">
+                        <h3 class="card-title">Foco e Disciplina</h3>
+                        <p class="card-text">pipipipopopo</p>
+                    </div>
                 </div>
             </div>
         </section>
         <!--Meus projetos-->
-        <section class="section proj" id="projects">
-            <div class="row" id="espacinho"></div>
+        <div id="projects"></div>
+        <section class="section proj">
             <h2 class="title pj">Meus Projetos</h2>
-            <div class="container">
+            <div class="container contproj">
                 <div class="row" style="height: 4rem">
                     <a href="#" class="col-lg-3 proj-link">Projeto1</a>
                     <a href="#" class="col-lg-3 proj-link">Projeto1</a>
@@ -111,25 +108,36 @@
                     <a href="#" class="col-lg-3 proj-link">Projeto1</a>
                     <a href="#" class="col-lg-3 proj-link">Projeto1</a>
                 </div>
+            </div>
+                <p class="formore">Para mais, acesse <a href="#" class="link">'meu GitHub'</a> e/ou <a href="#" class="link">'meu LinkedIn'</a>
+                </p>
+          
         </section>
         <!--Contato-->
         <section class="section contact" id="contact">
+            <div class="glass2">
             <h2 class="title contact-initial">Contato</h2>
-            <p class="description">Se quiser conversar comigo, me mande um e-mail!</p>
+            <p class="descriptionc">Se quiser conversar comigo, me mande um e-mail!</p>
             <a class="btn-contact" href="#">Enviar E-mail</a>
-
+            </div>
         </section>
     </main>
     <!--Rodapé-->
     <footer>
-        <a class="footer-brand">annabeatus</a>
-        <div class="redes-sociais">
+        <a class="footer-brand tab2" href="#home">annabeatus</a>
+        <div class="redes-sociais justify-content-end">
+            <a class="link-rs"></a>
+            <a class="link-rs"></a>
             <a class="link-rs"></a>
         </div>
-        <div>
+        <div class="tab2">
             <a href="https://www.flaticon.com/free-icons/computer" title="computer icons">Computer icons created by vectorsmarket15 - Flaticon</a>
         </div>
-        <p class="copyright" href="#home">&#169; 2022 Ana Beatriz Guassu Lopes</p>
+        <p class="copyright" href="#home" style="text-align: center;">&#169; 2022 Ana Beatriz Guassu Lopes</p>
     </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
