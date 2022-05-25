@@ -1,102 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="main.js"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <title>Portfolio - Ana Beatriz</title>
 </head>
 <body>
-    <!--Cabeçalho-->
-    <header id="header">
-        <nav class="navbar fixed-top navbar-expand-lg">
-            <button class="navbar-toggler" id="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-                <i class='bx bx-menu bx-flip-vertical' ></i>
-            </button>
-            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="#about" class="nav-link">Sobre Mim</a></li>
-                <li class="nav-item"><a href="#pq" class="nav-link">Por que trabalhar comigo?</a></li>
-                <li class="nav-item"><a href="#projects" class="nav-link">Meus Projetos</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
-                <li>
-                    <a class="change-theme" >
-                        <i id="change-theme" class='bx bx-sun bx-tada' alt="mudar tema" aria="mudar tema"></i></a>
-                </li>
-            </ul>
-            </div>
-        </nav>
-        
-    </header>
-    <main>
-        <a class="scrollup" href="#home">
-            <i class='bx bx-chevron-up'></i>
-        </a>
-        <!--Home-->
-        <section class="section-home home" id="home">
-            <div class="glass">
-                <div class="tab">
-                    <h1 id="ola"><strong>Olá!</strong></h1>
-                    <h2 id="nome">Meu nome é Ana Beatriz</h2>
-                    <p class="linha efeito-digitacao">Graduanda em Análise e Desenvolvimento de Sistemas</p>
-                    <p class="linha efeito-digitacao1">Junior UI designer & front-end dev</p>
-                    <button class="btn-resumo">Baixar o Resumo</button>
-                </div>
-            </div>            
-        </section>
-        <!--Sobre Mim-->
-        <div id="about"></div>
-        <section class="section about" id="about">
-                <div class="col aboutme">
-                    <h2 class="title about-initial">Sobre Mim</h2>
-                    <p class="description">Estudo Análise e Desenvolvimento de Sistemas na Fatec de Taquaritinga - SP.
-                        <br>Além disso, concluí o ensino médio na Etec de Matão concomitante ao curso técnico
-                        <br>de Informática para Internet, na qual aprendi:
-                    </p>
-                    <ul class="lista">
-                        <li class="about-list"><i class=""></i>Desenvolvimento de Jogos e Web com PHP</li>
-                        <li class="about-list"><i class=""></i>Web Forms com C#</li>
-                        <li class="about-list"><i class=""></i>CorelDraw e Photoshop</li>
-                        <li class="about-list"><i class=""></i>Banco de Dados e Integração ao site (CRUD)</li>
-                        <li class="about-list"><i class=""></i>Metodologias Ágeis</li>
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-toggleable-sm">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="#aboutMe" class="nav-link">Sobre Mim</a></li>
+                        <li class="nav-item"><a href="#projects" class="nav-link">Meus Projetos</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
                     </ul>
                 </div>
-               <div class="about-img col float-right">
-                    <img class="about-img rounded float-right" src="img/desktop-computer.png">
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end" >
+                    <ul class="navbar-nav flex-grow-1" style="justify-content:end;">
+                        <li>
+                            <a class="change-theme">
+                                <i class="fa-light fa-sun"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="botao">
+                                <span class="btn-contact-text">Contato</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-               
-    
-        </section>
-        <!--Por que trabalhar comigo?-->
-        <section class="section pq" id="pq">
-            <div class="container contpq">
-                <div class="row rowpq">
-                    <h2 class="title col-3">Por que trabalhar comigo?</h2>
-                    <div class="col-2">
-                        <h3 class="card-title">Foco e Disciplina</h3>
-                        <p class="card-text">pipipipopopo</p>
-                    </div>
-                    <div class="col-2">
-                        <h3 class="card-title">Foco e Disciplina</h3>
-                        <p class="card-text">pipipipopopo</p>
-                    </div>
-                    <div class="col-2">
-                        <h3 class="card-title">Foco e Disciplina</h3>
-                        <p class="card-text">pipipipopopo</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section__home">
+            <div class="glass">
+                <div class="tab">
+                    <h2 id="ola">Olá! Eu sou a </h2>
+                    <h1 id="nome">Ana Beatriz</h1>
+                    <p class="linha efeito-digitacao">Graduanda em Análise e Desenvolvimento de Sistemas</p>
+                    <p class="linha efeito-digitacao1">Junior UI designer & front-end dev</p>
+                    <div class="wrapper">
+                        <div class="tabinho">
+                            <a class="botao2">
+                                <span class="btn-download-text">Baixar o Resumo</span>
+                            </a>
+                        </div>
+                        <div class="social-media">
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Meus projetos-->
-        <div id="projects"></div>
-        <section class="section proj">
+        <!--Sobre Mim-->
+        <section id="aboutMe" class="section__aboutMe">
+            <div class="aboutMe">
+                <h1 class="title">Sobre Mim</h1>
+                <div class="cards">
+                    <div class="card UI/UX">
+                        <h2 class="card-title">
+                            UI/UX Designer
+                        </h2>
+                        <p class="card-text">
+                            Me identifiquei bastante no universo de UI/UX, e sempre busco melhorar e desenvolver meus projetos de modo inovador e intuitivo.
+                        </p>
+                    </div>
+                    <div class="card Desenvolvimento">
+                        <h2 class="card-title">
+                            Full-stack Developer
+                        </h2>
+                        <p class="card-text">
+                            Apesar de gostar mais do front-side, também desenvolvo a o back-side dos meus projetos utilizando:
+                            <ul>
+                                <li>
+                                    JavaScript
+                                </li>
+                                <li>
+                                    C#
+                                </li>
+                                <li>
+                                    PHP
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="card Metodologias">
+                        <h2 class="card-title">
+                            Metodologias Ágeis
+                        </h2>
+                        <p class="card-text">
+                            Combino qualidade e rapidez na entrega dos meus projetos, me inspirando em metodologias ágeis, como o Scrum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Projetos-->
+        <section id="services" class="section__services">
             <h2 class="title pj">Meus Projetos</h2>
             <div class="container contproj">
                 <div class="row" style="height: 4rem">
@@ -115,15 +129,19 @@
           
         </section>
         <!--Contato-->
-        <section class="section contact" id="contact">
-            <div class="glass2">
-            <h2 class="title contact-initial">Contato</h2>
-            <p class="descriptionc">Se quiser conversar comigo, me mande um e-mail!</p>
-            <a class="btn-contact" href="#">Enviar E-mail</a>
+        <section id="contact" class="section__contact">
+            <div class="glass__contact">
+                <div class="glass-wrapper">
+                    <h2 class="title contact-initial">Contato</h2>
+                        <p class="descriptionc">Se quiser conversar comigo, me mande um e-mail!</p>
+                        <a class="btn-contact" href="#">Enviar E-mail</a>
+                        <div class="social-mediac">
+
+                        </div>
+                </div>
             </div>
         </section>
     </main>
-    <!--Rodapé-->
     <footer>
         <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -158,9 +176,8 @@
         <p class="copyright" href="#home" style="text-align: center;">&#169; 2022 Ana Beatriz Guassu Lopes</p>
         </div> 
     </footer>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
