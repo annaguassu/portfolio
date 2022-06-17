@@ -41,9 +41,9 @@ body{
 
 
 .navbar{
-    background: rgba(255,255,255,0.1);
+    background: rgba(245, 21, 230, 0.1);
     backdrop-filter: blur(5px);
-    border-bottom: 0.5px solid rgba(255,255,255,0.5);
+    border-bottom: 0.5px solid rgba(222, 1, 130, 0.5);
 }
 
 .navbar button{
@@ -63,14 +63,6 @@ body{
     text-decoration: none;
 }
 
-.navbar-nav .nav-item .nav-link{
-    font-weight: 600;
-    
-}
-.navbar-nav .nav-item .nav-link:hover{
-    font-weight: bolder;
-    
-}
 .navbar ul .nav-item .buttons a:hover{
     color:#252934;
     background: #fafafa;
